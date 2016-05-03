@@ -1,4 +1,4 @@
-# 20160424 - Smart Copy v0.1
+# 20160424 - Smart Printer v0.1
 
 # Imports
 import os
@@ -55,12 +55,12 @@ im.save(filename)
 
 session = ftplib.FTP('domain.host.extension','user','pass')
 file = open(filename,'rb')
-session.cwd('/www/smartcopy/')
+session.cwd('/www/smart-printer/inputs')
 session.storbinary('STOR '+filename, file)
 file.close()
 session.quit()
 
-fileurl = "http://ssl15.ovh.net/~fclmprod/smartcopy/"+filename;
+fileurl = "http://ssl15.ovh.net/~fclmprod/mart-printer/inputs/"+filename;
 
 # Reverse image lookup
 cj = CookieJar()
